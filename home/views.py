@@ -25,7 +25,9 @@ def index(request):
                 StateOfDevice.objects.create(message=message, 
                 led_one_hex=rgb_one, led_two_hex=rgb_two, 
                 led_three_hex=rgb_three, led_four_hex=rgb_four)
+        # asking the server for the current time
         current_time = datetime.datetime.now().hour
+        print(current_time)
         tiempo = ""
         if current_time >= 0 and current_time < 12:
                 tiempo = "morning"
