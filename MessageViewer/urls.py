@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('home.urls')),
     path('api/', include('api.urls')),
+    path('movielist/', include("movielist.urls")),
     
 ]
