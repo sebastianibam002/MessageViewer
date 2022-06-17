@@ -1,4 +1,3 @@
-from turtle import title
 from django.shortcuts import render
 from .forms import DateForm, LookDate, DateEditForm
 from .models import DateIdeas
