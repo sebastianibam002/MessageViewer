@@ -47,7 +47,7 @@ def main(request):
                 date_idea.image = request.FILES['image']
                 # convert the image to a 64bit text fields
                 date_idea.save()
-                edit_form = LookDate()
+                edit_form = DateEditForm()
 
     # if a GET (or any other method) we'll create a blank form
     else:
