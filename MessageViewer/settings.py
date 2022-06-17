@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+      'crispy_forms',
     'home',
     'api',
     'movielist',
+    'album',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +86,7 @@ DATABASES = {
             'NAME': 'MessageViewer',
             'USER': 'djangouser',
             'PASSWORD': 'Motocros19@',
-            'HOST': '5.183.11.81',
+            'HOST': '82.180.160.116',
             'PORT': '3306',
         }
     }
@@ -129,3 +132,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# For the bootstrap
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# For the media the it is uploaded
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
