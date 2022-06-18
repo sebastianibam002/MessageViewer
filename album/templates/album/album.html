@@ -265,13 +265,21 @@
                                             </div>
 
 
-                                            
+                                            <div class="d-block d-sm-none pb-3">
+                                              <p >{{date.title}}</p>
+                                              <p >{{date.details}}</p>
+                                              <p >{{date.review}}</p>
+                                              {% if  date.date_done %}
+                                              <p >{{date.date_done}}</p>
+                                            {% endif %}
+                                              
+                                            </div>
                                          
                                             
                                                                                 
                                         </div>
 
-                       
+                                        
                                         
                                         {% endfor %}
                                       
