@@ -210,12 +210,7 @@
                                         <div class="carousel-item active" data-bs-interval="10000">
                                         <img src="https://cdn.pixabay.com/photo/2022/05/09/17/08/mute-swan-7185076_960_720.jpg" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
-                                            <h5>First slide label</h5> <!-- Title -->
-                                            <p>Some representative placeholder content for the first slide. <span class="badge badge-light">9</span></p> <!-- Description -->
-                                          <!-- Priority -->
-                                            <p> Fue en una buena cita </p><!-- Review -->
-                                            <p> 2022-10-22 </p><!-- Date Done -->
-                                            <p> Short </p><!-- Possible duration -->
+                                            
                                         </div>
                                         </div>
                                         {% for date in dates_collection %}
@@ -233,12 +228,12 @@
                                               </div>
                                               <div class="col-3">
                                                 {% if date.duration == 'short' %}
-                                                <span class="alert alert-light">Duration: {{date.duration}}</span>
+                                                <span class="alert alert-light">{{date.duration}}</span>
                                                 {% elif date.duration == 'medium'%}
-                                                <span class="alert alert-info">Duration: {{date.duration}}</span>
+                                                <span class="alert alert-info">{{date.duration}}</span>
   
                                                 {% elif date.duration == 'long'%}
-                                                <span class="alert alert-success">Duration: {{date.duration}}</span>
+                                                <span class="alert alert-success">{{date.duration}}</span>
                                                 {% endif %}
                                                 
                                               </div>
