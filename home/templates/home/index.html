@@ -41,57 +41,61 @@
     }
 
     function changeToWinter() {
-    first_one = document.querySelector('#rgb_one');
-    second_one = document.querySelector('#rgb_two');
-    third_one = document.querySelector('#rgb_three');
-    fourth_one = document.querySelector('#rgb_four');
+    first_one = document.querySelectorAll('[name="rgb_one"]');
+    second_one = document.querySelectorAll('[name="rgb_two"]');
+    third_one = document.querySelectorAll('[name="rgb_three"]');
+    fourth_one = document.querySelectorAll('[name="rgb_four"]');
+
+    first_one.forEach(function(element){element.value = '#D1DACD'});
+    second_one.forEach((element) => {element.value = '#D5F0D6'});
+    third_one.forEach((element)=>{element.value = '#E6F0D5'});
+    fourth_one.forEach((element) => {element.value = '#CCE6D4'});
+    changeBgColor('#D1DACD', '#D5F0D6', '#E6F0D5', '#CCE6D4');
     
-    first_one.value = '#D1DACD';
-    second_one.value = '#D5F0D6';
-    third_one.value = '#E6F0D5';
-    fourth_one.value = '#CCE6D4';
-    changeBgColor(first_one.value, second_one.value, third_one.value, fourth_one.value);
 
 }
 
 
 function changeToSpring() {
-    first_one = document.querySelector('#rgb_one');
-    second_one = document.querySelector('#rgb_two');
-    third_one = document.querySelector('#rgb_three');
-    fourth_one = document.querySelector('#rgb_four');
+    first_one = document.querySelectorAll('[name="rgb_one"]');
+    second_one = document.querySelectorAll('[name="rgb_two"]');
+    third_one = document.querySelectorAll('[name="rgb_three"]');
+    fourth_one = document.querySelectorAll('[name="rgb_four"]');
+
+    first_one.forEach(function(element){element.value = '#6BDB35'});
+    second_one.forEach((element) => {element.value = '#2EF230'});
+    third_one.forEach((element)=>{element.value = '#B4F22E'});
+    fourth_one.forEach((element) => {element.value = '#E8E62C'});
+    changeBgColor('#6BDB35', '#2EF230', '#B4F22E', '#E8E62C');
+
     
-    first_one.value = '#6BDB35';
-    second_one.value = '#2EF230';
-    third_one.value = '#B4F22E';
-    fourth_one.value = '#E8E62C';
-    changeBgColor(first_one.value, second_one.value, third_one.value, fourth_one.value);
 }
 
 function changeToAutumn() {
-    first_one = document.querySelector('#rgb_one');
-    second_one = document.querySelector('#rgb_two');
-    third_one = document.querySelector('#rgb_three');
-    fourth_one = document.querySelector('#rgb_four');
-    
-    first_one.value = '#E10900';
-    second_one.value = '#F7360C';
-    third_one.value = '#ED550C';
-    fourth_one.value = '#B80600';
-    changeBgColor(first_one.value, second_one.value, third_one.value, fourth_one.value);
+    first_one = document.querySelectorAll('[name="rgb_one"]');
+    second_one = document.querySelectorAll('[name="rgb_two"]');
+    third_one = document.querySelectorAll('[name="rgb_three"]');
+    fourth_one = document.querySelectorAll('[name="rgb_four"]');
+
+    first_one.forEach(function(element){element.value = '#E10900'});
+    second_one.forEach((element) => {element.value = '#F7360C'});
+    third_one.forEach((element)=>{element.value = '#ED550C'});
+    fourth_one.forEach((element) => {element.value = '#B80600'});
+    changeBgColor('#E10900', '#F7360C', '#ED550C', '#B80600');
 }
 
 function changeToSummer() {
-    first_one = document.querySelector('#rgb_one');
-    second_one = document.querySelector('#rgb_two');
-    third_one = document.querySelector('#rgb_three');
-    fourth_one = document.querySelector('#rgb_four');
-    
-    first_one.value = '#FFD600';
-    second_one.value = '#E8DA0C';
-    third_one.value = '#FFA60D';
-    fourth_one.value = '#E8DA0C';
-    changeBgColor(first_one.value, second_one.value, third_one.value, fourth_one.value);
+
+    first_one = document.querySelectorAll('[name="rgb_one"]');
+    second_one = document.querySelectorAll('[name="rgb_two"]');
+    third_one = document.querySelectorAll('[name="rgb_three"]');
+    fourth_one = document.querySelectorAll('[name="rgb_four"]');
+
+    first_one.forEach(function(element){element.value = '#FFD600'});
+    second_one.forEach((element) => {element.value = '#E8DA0C'});
+    third_one.forEach((element)=>{element.value = '#FFA60D'});
+    fourth_one.forEach((element) => {element.value = '#E8DA0C'});
+    changeBgColor('#FFD600', '#E8DA0C', '#FFA60D', '#E8DA0C');
 }
 
     </script>
@@ -108,13 +112,29 @@ function changeToSummer() {
     
 
                 
-                <div class="list-group list-group-horizontal mb-4" role="group" aria-label="Basic example">
+                <div class="list-group list-group-horizontal mb-4 d-none d-sm-block text-center" role="group" aria-label="Basic example">
                     <li type="button" class="btn btn-secondary flex-fill" onclick="changeToWinter();">Winter</li>
                     <li type="button" class="btn btn-secondary flex-fill" onclick="changeToSpring();">Spring</li>
                     <li type="button" class="btn btn-secondary flex-fill" onclick="changeToAutumn();">Autumn</li>
                     <li type="button" class="btn btn-secondary flex-fill" onclick="changeToSummer();">Summer</li>
-                  </div>
+                </div>
 
+                <div class="mb-4 d-block d-sm-none" role="group" aria-label="Basic example">
+                    <div class="row m-2">
+                        <div class="col"><button type="button" class="btn btn-info" onclick="changeToWinter();">Winter</button></div>
+                        <div class="col"><button type="button" class="btn btn-success" onclick="changeToSpring();">Spring</button></div>
+                        
+                        
+                    </div>
+                    <div class="row m-2">
+                        <div class="col"><button type="button" class="btn btn-danger" onclick="changeToAutumn();">Autumn</button></div>
+                        <div class="col"><button type="button" class="btn btn-warning" onclick="changeToSummer();">Summer</button></div>
+                        
+                        
+                    </div>
+            
+
+                </div>
 
 
                 <form action="{% url 'home:index' %}" method="post">
@@ -128,25 +148,79 @@ function changeToSummer() {
                     
                    
 
-                    <div class="list-group list-group-horizontal mb-4">
-                        <li class="list-group-item flex-fill">
-                            <label class="form-label"> Color One </label>
-                            <input type="color" class="form-control" name="rgb_one" id="rgb_one" onchange="changeBgColor(this.value, rgb_two.value, rgb_three.value, rgb_four.value)">
-                        </li>
-                        <li class="list-group-item flex-fill">
-                            <label class="form-label"> Color Two </label>
-                            <input type="color" class="form-control" name="rgb_two" id="rgb_two" onchange="changeBgColor(rgb_one.value, this.value, rgb_three.value, rgb_four.value)">
-                        </li>
-                        <li class="list-group-item flex-fill">
-                            <label class="form-label"> Color Three </label>
-                            <input type="color" class="form-control" name="rgb_three" id="rgb_three" onchange="changeBgColor(rgb_one.value, rgb_two.value, this.value, rgb_four.value)">
-                        </li>
-                        <li class="list-group-item flex-fill">
-                            <label class="form-label"> Color Four </label>
-                            <input type="color" class="form-control" name="rgb_four" id="rgb_four" onchange="changeBgColor(rgb_one.value, rgb_two.value, rgb_three.value, this.value)">
-                        </li>
+                    <div class="list-group list-group-horizontal mb-4 d-none d-sm-inline">
+                        <div class="row">
+                            <div class="col">
+                                <li class="list-group-item flex-fill">
+                                    <label class="form-label"> Color One </label>
+                                    <input type="color" class="form-control" name="rgb_one" id="rgb_one" onchange="changeBgColor(this.value, rgb_two.value, rgb_three.value, rgb_four.value)">
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-group-item flex-fill">
+                                    <label class="form-label"> Color Two </label>
+                                    <input type="color" class="form-control" name="rgb_two" id="rgb_two" onchange="changeBgColor(rgb_one.value, this.value, rgb_three.value, rgb_four.value)">
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-group-item flex-fill">
+                                    <label class="form-label"> Color Three </label>
+                                    <input type="color" class="form-control" name="rgb_three" id="rgb_three" onchange="changeBgColor(rgb_one.value, rgb_two.value, this.value, rgb_four.value)">
+                                </li>
+                            </div>
+                            <div class="col">
+                                <li class="list-group-item flex-fill">
+                                    <label class="form-label"> Color Four </label>
+                                    <input type="color" class="form-control" name="rgb_four" id="rgb_four" onchange="changeBgColor(rgb_one.value, rgb_two.value, rgb_three.value, this.value)">
+                                </li>   
+                            </div>
+                        </div>
+                 
+                       
+                      
+                  
                     </div>
-                    <div class="d-grid">
+
+
+                    <div class="list-group list-group-horizontal mb-4 d-block d-sm-none">
+                        <div class="row">
+                            <div class="col">
+                                <li class="list-group-item flex-fill">
+                                    <label class="form-label"> First </label>
+                                    <input type="color" class="form-control" name="rgb_one" onchange="changeBgColor(this.value, rgb_two.value, rgb_three.value, rgb_four.value)">
+                           
+                                </li>
+                                
+                            </div>
+                        <div class="col">
+                            <li class="list-group-item flex-fill"><label class="form-label"> Second </label>
+                                <input type="color" class="form-control" name="rgb_two" id="rgb_two" onchange="changeBgColor(rgb_one.value, this.value, rgb_three.value, rgb_four.value)">
+                            </li>
+                        </div>
+                        </div>
+                            <div class="row">
+
+                                <div class="col">
+                                    <li class="list-group-item flex-fill">
+                                        <label class="form-label"> Third </label>
+                                        <input type="color" class="form-control" name="rgb_three" id="rgb_three" onchange="changeBgColor(rgb_one.value, rgb_two.value, this.value, rgb_four.value)">
+                                    
+                                    </li>
+                               
+                                </div>
+                                <div class="col">
+                                    <li class="list-group-item flex-fill">
+                                        <label class="form-label"> Fourth </label>
+                                        <input type="color" class="form-control" name="rgb_four" id="rgb_four" onchange="changeBgColor(rgb_one.value, rgb_two.value, rgb_three.value, this.value)">
+                                
+
+                                    </li>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="d-grid p-4">
                         <button type="submit" class="btn btn-secondary"> Subir Cambios</button>
                     </div>
                     
@@ -156,11 +230,55 @@ function changeToSummer() {
                         
                         
                         <h6 class="h6 fw-bold">
-                            Song Suggestion of the Day
+                            Today's Song
                         </h6>
                         
-                        <div class="row align-items-center">
-                            <div class="col-7"><p>
+                        <div class="align-items-center d-none d-sm-block">
+                            <div class="row">
+                                <div class="col-7">
+                                    
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <p class="font-weight-bold"> 
+                                                Song's Name:
+                                            </p>
+                                            <p>
+                                                {{name_song}}
+                                            </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="font-weight-bold"> 
+                                                Artist:
+                                            </p>
+                                            <p>
+                                                {{artist}}
+                                            </p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="font-weight-bold"> 
+                                                Preview:
+                                            </p>
+                                            {% if preview_song is None %}
+                                            Preview Unavailable
+                                            {% else %}
+                                            <a href={{preview_song}}>click here </a>
+                                            {% endif %}  
+                                            
+                                        </li>
+                                               
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col">
+                                    <img class="rounded shadow" src={{image_song}} style="width:200;height:200px;">
+                                </div>
+
+                        </div>
+                    
+                        </div>
+
+                        <div class="row align-items-center d-block d-sm-none">
+                            <div class="col"><p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">
                                         <p class="font-weight-bold"> 
@@ -193,11 +311,10 @@ function changeToSummer() {
                                 </ul>
                                 
                             </p></div>
-                            <div class="col align-items-center">
+                            <div class="col text-center">
                                 <img class="rounded shadow" src={{image_song}} style="width:200;height:200px;">
                             </div>
                         </div>
-                       
                     </div>
          
 

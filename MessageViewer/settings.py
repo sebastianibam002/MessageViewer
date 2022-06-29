@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(id2gz+ag8q#*3o+lfllx(5!_e2vb$$9ex3-5@tywpl0mxo0qq'
+SECRET_KEY = os.environ['MESSAGE_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,8 +84,8 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'MessageViewer',
-            'USER': 'djangouser',
-            'PASSWORD': 'Motocros19@',
+            'USER': os.environ['USERMESSAGE'],
+            'PASSWORD': os.environ['PASSMESSAGE'],
             'HOST': '82.180.160.116',
             'PORT': '3306',
         }
