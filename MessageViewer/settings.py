@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(id2gz+ag8q#*3o+lfllx(5!_e2vb$$9ex3-5@tywpl0mxo0qq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', '82.180.160.116:2000', '82.180.160.116']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', '82.180.160.116:2000', '82.180.160.116', 'gradientvector.art']
 
 
 # Application definition
